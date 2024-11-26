@@ -43,8 +43,8 @@ def rename_files(csv_path, directory):
 
 if __name__ == "__main__":
     # Ask the user for the CSV file path and directory
-    csv_path = input("Enter the full path to the CSV file: ").strip()
-    directory = input("Enter the full path to the directory: ").strip()
+    csv_path = input("Enter the full path to the CSV file: ").strip().strip('"')
+    directory = input("Enter the full path to the directory: ").strip().strip('"')
 
     # Normalize paths to handle backslashes in Windows
     csv_path = os.path.normpath(csv_path)
